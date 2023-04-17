@@ -1,0 +1,68 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: "SofiaProRegular";
+    src: url("/fonts/Sofia Pro Regular Az.otf");
+  }
+  pre {
+    padding-left: 2rem;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  body {
+    font-family: "SofiaProRegular", sans-serif;
+  }
+  * {
+    font-size: 14px;
+  }
+  h1 {
+    text-align: right;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-bottom: 2.25rem;
+  }
+  h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+  h3 {
+    font-size: 1.75rem;
+    margin: 0.75rem 0;
+  }
+  p {
+    margin: 1.25rem 0;
+  }
+  ol {
+    list-style: decimal;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  ol li {
+    margin: 2px 0;
+  }
+  a {
+    color: #3b82f6;
+  }
+</style>
